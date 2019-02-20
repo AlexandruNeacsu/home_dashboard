@@ -29,6 +29,9 @@ class MobileMenu extends Component {
                             <NavLink to="/sensors/">
                                 <Menu.Item>Detail</Menu.Item>
                             </NavLink>
+                            <a href="http://192.168.0.242:8000/index.html">
+                                <Menu.Item>Camera</Menu.Item>
+                            </a>
                         </Sidebar>
                         <Sidebar.Pusher dimmed={sidebarOpened}>
                             <Button icon onClick={this.handleToggle}>
@@ -55,6 +58,11 @@ const DesktopMenu = ({children}) =>
                     <Icon name="area graph" /> Detail
                 </Menu.Item>
             </NavLink>
+            <a href="http://192.168.0.242:8000/index.html">
+                <Menu.Item name="Camera">
+                    <Icon name="video camera    " /> Camera
+                </Menu.Item>
+            </a>
             </Menu>
         <div className='desktopOverview'>
             {children}
