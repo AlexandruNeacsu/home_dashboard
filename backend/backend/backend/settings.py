@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['uneori.pythonanywhere.com', '127.0.0.1', '192.168.1.100', 'localhost']
+ALLOWED_HOSTS = ['uneori.pythonanywhere.com', '127.0.0.1', '192.168.0.172', 'localhost']
 
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     )
 }

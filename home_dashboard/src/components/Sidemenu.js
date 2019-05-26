@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {NavLink} from 'react-router-dom'
 import { Menu, Icon, Responsive, Sidebar, Button } from "semantic-ui-react";
 
+const IP = "http://192.168.0.251:8000/index.html"
+
 class MobileMenu extends Component {
     state = {}
 
@@ -29,7 +31,7 @@ class MobileMenu extends Component {
                             <NavLink to="/sensors/">
                                 <Menu.Item>Detail</Menu.Item>
                             </NavLink>
-                            <a href="http://192.168.0.242:8000/index.html">
+                            <a href={IP}>
                                 <Menu.Item>Camera</Menu.Item>
                             </a>
                         </Sidebar>
@@ -58,7 +60,7 @@ const DesktopMenu = ({children}) =>
                     <Icon name="area graph" /> Detail
                 </Menu.Item>
             </NavLink>
-            <a href="http://192.168.0.242:8000/index.html">
+            <a href={IP}>
                 <Menu.Item name="Camera">
                     <Icon name="video camera    " /> Camera
                 </Menu.Item>

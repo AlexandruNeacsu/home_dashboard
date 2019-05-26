@@ -73,7 +73,7 @@ class SensorGraph extends Component {
                                 <Statistic.Label>{label}</Statistic.Label>
                             </Statistic>
                         </Segment>
-                        <Header>{this.props.type === 'temp' ? 'Temperatura' : 'Umiditate'} curenta</Header>
+                        <Header>{this.props.type === 'temp' ? 'Temperatura' : 'Temperatura'} curenta</Header>
                     </Container>            
                 </Grid.Column>
         </Grid.Row>   

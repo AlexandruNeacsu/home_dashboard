@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
-
+import imagine from "../images/logare.png"
 const cookie = new Cookies();
 
 
@@ -77,12 +77,15 @@ class LoginForm extends Component {
           body > div > div,
           body > div > div > div.login-form {
             height: 100%;
+	    background-image: url("${imagine}");
+	    background-repeat: no-repeat;
+	    background-size: auto;
           }
         `}</style>
         <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
           <Grid.Column style={{ maxWidth: 450 }}>
             <Header as='h2' color='teal' textAlign='center'>
-              Log-in to your account
+              H.A.R.I.
             </Header>
             <Form size='large' onSubmit={this.handleSubmit} error={SERVER_ERROR} warning={USER_ERROR}>
               <Segment stacked loading={this.state.loading}>
@@ -92,7 +95,7 @@ class LoginForm extends Component {
                 value={this.state.username}
                 icon='user'
                 iconPosition='left'
-                placeholder='username'
+                placeholder='Nume Utilizator'
                 onChange={this.handleChange}
                 error={USER_ERROR}
                 />
@@ -102,19 +105,19 @@ class LoginForm extends Component {
                   value={this.state.password}
                   icon='lock'
                   iconPosition='left'
-                  placeholder='Password'
+                  placeholder='Parola'
                   type='password'
                   onChange={this.handleChange}
                   error={USER_ERROR}
                 />
 
                 <Button color='teal' fluid size='large'>
-                  Login
+                  Logare
                 </Button>
               </Segment>
 
-              <Message error hidden={SERVER_ERROR} header="Something is wrong whith the server" content="Please try again later!"/>
-              <Message warning  header="Username or password is incorrect" content="Please try again!" />
+              <Message error hidden={SERVER_ERROR} header="Eroare server" content="Incearca mai tarziu!"/>
+              <Message warning  header="Numele sau parola sunt gresite" content="Incearca din nou!" />
 
             </Form>
           </Grid.Column>

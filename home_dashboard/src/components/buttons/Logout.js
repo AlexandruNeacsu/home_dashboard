@@ -10,6 +10,7 @@ export default class Logout extends Component {
         const URL = this.props.url +  'auth/logout/';
         const token = Cookie.get("token")
         Cookie.remove("token")
+	Cookie.remove('csrftoken')
         axios.post(URL,{}, {
             headers: {
                 "Authorization": `Token ${token}`
